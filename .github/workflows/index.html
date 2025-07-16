@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hlumelo | Dev Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #00f0ff;
+      --glass: rgba(0, 0, 0, 0.65);
+      --glow: 0 0 10px #00f0ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fira Code', monospace;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 15px 40px;
+      background: var(--glass);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid var(--primary);
+    }
+
+    nav h1 {
+      color: var(--primary);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .section {
+      padding: 120px 40px 60px;
+      background-color: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 150px;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: var(--primary);
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: var(--primary);
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--primary);
+      border-radius: 8px;
+      padding: 20px;
+      margin: 15px 0;
+      box-shadow: var(--glow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 20px #00f0ff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 6px;
+    }
+
+    form button {
+      background: var(--primary);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1>Hlumelo.dev</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero section" data-aos="zoom-in">
+  <h1>Hi, I'm Hlumelo 👨🏽‍💻</h1>
+  <p>Business Analyst & Full-Stack Developer with a passion for impactful digital solutions.</p>
+  <a href="#projects"><button class="btn">Explore Projects</button></a>
+</section>
+
+<!-- About -->
+<section id="about" class="section" data-aos="fade-right">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>I’m an IT professional and developer based in South Africa. I specialize in building web and mobile applications, conducting business process analysis, and improving systems with modern tech.</p>
+    <p>Technologies I love: Python, JavaScript, Node.js, Java, Flask, and React. I also work with xBML, SWOT, SIPOC, and sustainability frameworks.</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section" data-aos="fade-left">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card" data-aos="flip-left">
+      <h4>QR Code Scanner App</h4>
+      <p>ZXing, SharedPreferences, clean UX and permission handling.</p>
+    </div>
+    <div class="card" data-aos="flip-right">
+      <h4>Quiz App System</h4>
+      <p>SQLite quiz platform with user performance analytics.</p>
+    </div>
+    <div class="card" data-aos="flip-left">
+      <h4>Movie List App</h4>
+      <p>RecyclerView + Glide + ViewHolder = awesome UI.</p>
+    </div>
+    <div class="card" data-aos="flip-right">
+      <h4>Business Modelling Toolkit</h4>
+      <p>Used in Re.Read to map business operations using BML.</p>
+    </div>
+    <div class="card" data-aos="flip-left">
+      <h4>Sustainability Engine</h4>
+      <p>Analyzed business gaps + proposed green solutions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section" data-aos="fade-up">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">Python / Flask</div>
+    <div class="card">JavaScript / Node.js</div>
+    <div class="card">Java / Android Studio</div>
+    <div class="card">SQLite / PostgreSQL</div>
+    <div class="card">xBML / SWOT / Root Cause</div>
+    <div class="card">HTML / CSS / Bootstrap</div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section id="timeline" class="section" data-aos="fade-up">
+  <h2>Experience Timeline</h2>
+  <div class="card">
+    <p><strong>2025:</strong> Business Analyst Intern @ eThekwini Municipality</p>
+    <p><strong>2024:</strong> IT Support Intern @ Health Systems Trust</p>
+    <p><strong>2023:</strong> Completed Bachelor of IT</p>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certs" class="section" data-aos="fade-up">
+  <h2>Certifications</h2>
+  <div class="card">
+    <p>✔ Advanced Diploma in Business Analysis – Rhodes University</p>
+    <p>✔ Google IT Support – Coursera</p>
+    <p>✔ Java Developer Certificate – Richfield</p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="section" data-aos="fade-in">
+  <h2>What People Say</h2>
+  <div class="card">
+    <p>"Hlumelo is an exceptional analyst and problem-solver. His work with our systems streamlined many workflows." — Supervisor, eThekwini</p>
+  </div>
+  <div class="card">
+    <p>"His portfolio is professional, clean, and modern. Highly recommended!" — Peer Reviewer</p>
+  </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="section" data-aos="zoom-in">
+  <h2>Blog Snippets</h2>
+  <div class="card">
+    <h4>🔍 Root Cause Analysis Guide</h4>
+    <p>How I use the 5 Whys & Fishbone Diagrams to find real issues in processes.</p>
+  </div>
+  <div class="card">
+    <h4>📱 Android App Journey</h4>
+    <p>How I built my first mobile app from scratch using Java + Glide + SQLite.</p>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section" data-aos="fade-up">
+  <h2>Contact Me</h2>
+  <div class="card">
+    <form action="https://formspree.io/f/xgvkqokl" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="footer">© 2025 Hlumelo Magadla | All Rights Reserved</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+
+</body>
+</html>
